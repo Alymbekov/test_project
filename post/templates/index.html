@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>My first project</h1>
+    <h2>My name is {{ user.username|upper }}</h2>
+        {% for name in names %}
+            <h3>{{ name }}</h3>
+        {% endfor %}
+{#        <ul>#}
+{##}
+{#            {% for x in lists %}#}
+{#                <li>{{ x }}</li>#}
+{#            {% endfor %}#}
+{##}
+{#        </ul>#}
+
+        <img src="{{ avatar }}">
+        <h1>{{ full_name }}</h1>
+
+</body>
+</html>
