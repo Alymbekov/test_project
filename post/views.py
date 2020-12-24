@@ -1,5 +1,7 @@
 from django.shortcuts import render
-import post.parser
+import post.models
+
+# import post.parser
 # from django.http import HttpResponse
 #
 # def index(request):
@@ -22,4 +24,12 @@ def index(request):
     names = ['John', 'Raychel', 'Jane', 'Peter']
     return render(request, 'index.html', locals())
 
+def get_posts(request):
+    object_list = post.models.Post.objects.all().only('id', 'title')
+    """SELECT * FROM post_post"""
+    # post.models.Post.objects.
+    # hello = object_list.get(pk=5)
+    # print(hello.rating_set.all())
+    # print("hello")
+    return render(request, 'posts.html', locals())
 
